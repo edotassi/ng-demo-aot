@@ -9,7 +9,7 @@ var builder = new Builder({
 builder.loadConfig("./systemjs.config.js");
 
 builder
-    .buildStatic('build/main.js', 'dist/outfile.js')
+    .buildStatic('build/main.js', 'dist/app.js')
     .then(function () {
         console.log('Build complete');
     })
