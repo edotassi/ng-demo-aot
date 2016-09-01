@@ -13,6 +13,4 @@ gulp.task("build", function(done) {
     runSequence("ngc", "bundle", "minify", done);
 });
 
-gulp.task("serve", function() {
-    
-});
+gulp.task("serve", shell.task("http-server ./"));
