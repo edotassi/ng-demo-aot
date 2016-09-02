@@ -16,8 +16,12 @@ export class AppComponent implements OnInit {
     }
 
     public ngOnInit() {
-        setInterval(() => {
-            this.hello.world = new Date().getTime() + "";
+        setInterval(async () => {
+            this.hello.world = await this.getTime();
         }, 1000);
     }
- }
+
+    private getTime(): Promise<string> {
+        return Promise.resolve(new Date().getTime() + "");
+    }
+}

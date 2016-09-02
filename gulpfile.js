@@ -10,7 +10,7 @@ gulp.task("ngc", shell.task("node_modules\\.bin\\ngc.cmd"));
 gulp.task("bundle", shell.task(["node builder.js"]));
 
 gulp.task("build", function(done) {
-    runSequence("ngc", "bundle", "minify", done);
+    runSequence("ngc", "bundle", done);
 });
 
 gulp.task("serve", shell.task("http-server ./"));
